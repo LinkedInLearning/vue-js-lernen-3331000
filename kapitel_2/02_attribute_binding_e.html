@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue</title>
+    <script src="lib/js/vue.global.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <h1>{{ greeting }}, {{person.name}}</h1>
+        <img :src="person.image" :alt="person.name">
+
+    </div>
+    <script>
+        Vue.createApp({
+            data() {
+                return {
+                    greeting: 'Guten Tag',
+                    person: {
+                        name: 'Marta Muster',
+                        location: 'München',
+                        age: 27,
+                        image: 'img/bild.png'
+                    }
+                }
+            }
+        }).mount('#app')
+    </script>
+</body>
+
+</html>

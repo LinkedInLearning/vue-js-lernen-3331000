@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue</title>
+    <script src="lib/js/vue.global.js"></script>
+</head>
+
+<body>
+
+    <div id="app">
+        <button onclick="alert('danke')">Klick mal</button>
+        <button @click="count++">count++</button>
+        <button @click="increment">increment</button>
+        <button @click="say('Hallo')">say('Hallo')</button>
+        <p>Schon {{count}}mal geklickt</p>
+        <p>Der Gruß: {{greeting}}</p>
+        <a href="https://linkedin.com">Link</a>
+    </div>
+
+    <script>
+        Vue.createApp({
+            data() {
+                return {
+                    count: 0,
+                    greeting: ''
+                }
+            },
+            methods: {
+                increment() {
+                    this.count++
+                },
+                say(greeting) {
+                    this.greeting = greeting
+                }
+            }
+
+
+        }).mount('#app')
+    </script>
+
+</body>
+
+</html>

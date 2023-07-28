@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue</title>
+    <script src="lib/js/vue.global.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <p v-if="Math.random() > 0.5">
+            Jetzt bin ich zu sehen
+        </p>
+        <p v-else>
+            Jetzt nicht ...
+        </p>
+    </div>
+    <script>
+        Vue.createApp().mount('#app')
+    </script>
+
+
+</body>
+
+</html>

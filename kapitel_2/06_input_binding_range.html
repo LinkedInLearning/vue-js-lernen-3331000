@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue</title>
+    <script src="lib/js/vue.global.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <input type="range" v-model="amount">
+        <p>Gewählter Wert: {{ amount }}</p>
+    </div>
+    <script>
+        Vue.createApp({
+            data() {
+                return {
+                    amount: 50
+                }
+            }
+        }).mount('#app')
+    </script>
+
+
+
+</body>
+
+</html>

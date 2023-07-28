@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue</title>
+    <script src="lib/js/vue.global.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <h1>Alter {{person.age}}</h1>
+
+        <p>Alter {{person.age}}, und das heißt:
+            <template v-if="person.age > 18">volljährig</template>
+            <template v-else>nicht volljährig</template>
+        </p>
+        <p v-show="person.age > 18">Mit v-show: Volljährig</p>
+
+    </div>
+    <script>
+        Vue.createApp({
+            data() {
+                return {
+                    person: {
+                        name: 'Marta Muster',
+                        location: 'München',
+                        age: 17,
+                        image: 'img/bild.png'
+                    }
+                }
+            }
+        }).mount('#app')
+
+    </script>
+</body>
+
+</html>

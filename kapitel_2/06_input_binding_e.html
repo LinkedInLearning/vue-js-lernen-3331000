@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue</title>
+    <script src="lib/js/vue.global.js"></script>
+</head>
+
+<body>
+    <div id="app">
+
+        <!-- <input 
+        :value="greeting" 
+        @input="event => greeting = event.target.value"> -->
+        <input v-model="greeting">
+        <p>Ein kleiner Gruß: {{ greeting }}</p>
+    </div>
+    <script>
+
+        Vue.createApp({
+            data() {
+                return {
+                    greeting: 'Hallo Vue!'
+                }
+            }
+        }).mount('#app')
+    </script>
+
+
+</body>
+
+</html>

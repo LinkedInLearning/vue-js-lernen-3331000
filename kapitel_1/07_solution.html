@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vue</title>
+  <!-- <script src="https://unpkg.com/vue@3.3.4"></script> -->
+  <script src="lib/js/vue.global.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <h1>{{ greeting }}</h1>
+    <p>Und laut: {{greeting.toUpperCase()}}
+      mit {{greeting.length}} Zeichen</p>
+    <h2>Heute ist der {{new Date().toLocaleString()}}</h2>
+    <p>{{person.name}} wohnt in {{person.location}}</p>
+    <p>{{goodby}}</p>
+  </div>
+  <script>
+    Vue.createApp({
+      data() {
+        return {
+          greeting: 'Guten Tag!',
+          goodby: 'Und tschüss',
+          person: {
+            name: 'Marta Muster',
+            location: 'München'
+          }
+        }
+      }
+    }).mount('#app')
+  </script>
+</body>
+
+</html>
