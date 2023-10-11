@@ -12,6 +12,7 @@ Idealerweise sollten Sie über grundlegende JavaScript-Kenntnisse verfügen und 
 ## Installation
 
 1. Klonen Sie das Repository in Ihre lokale Maschine unter Verwendung von terminal (Mac), CMD (Windows) oder ein anderes Werkzeug mit grafischer Bedienoberfläche wie SourceTree.
+2. Die Übungsdateien sind in Kapiteln im Hauptverzeichnis zu finden und korrespondieren mit der Filmstruktur.
 
 ## Autorin
 **Florence Maurice**
